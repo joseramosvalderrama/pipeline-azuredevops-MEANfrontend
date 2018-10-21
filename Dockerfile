@@ -5,9 +5,9 @@ COPY package.json /app
 RUN npm install
 COPY . /app
 
-RUN npm run build
-
 RUN npm run test
+
+RUN npm run build
 
 WORKDIR /app/dist/HelloWorld-Angular
 
