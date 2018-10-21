@@ -7,6 +7,8 @@ COPY . /app
 
 RUN npm run build
 
+RUN npm run test
+
 WORKDIR /app/dist/HelloWorld-Angular
 
 EXPOSE 80
