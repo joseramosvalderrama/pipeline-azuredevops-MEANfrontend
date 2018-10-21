@@ -7,5 +7,5 @@ COPY . /app
 
 RUN npm run build
 
-WORKDIR /app/dist
+WORKDIR /app/dist/helloworld-angular
 
