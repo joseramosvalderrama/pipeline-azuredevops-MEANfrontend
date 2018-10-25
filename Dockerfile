@@ -1,4 +1,4 @@
-FROM node:alpine as node-angular-cli
+FROM stefanscherer/node-windows:nanoserver as node-angular-cli
 
 WORKDIR /app
 COPY package.json /app
