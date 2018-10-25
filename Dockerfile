@@ -1,15 +1,20 @@
-FROM stefanscherer/node-windows:nanoserver as node-angular-cli
-
+# STEP 1 build static website
+FROM node:alpine as builder
+RUN apk update && apk add --no-cache make git
+# Create app directory
 WORKDIR /app
-COPY package.json /app
-RUN npm install
-COPY . /app
+# Install app dependencies
+COPY package.json package-lock.json Makefile  /app/
+RUN cd /app && npm set progress=false && npm install
+# Copy project files into the docker image
+COPY .  /app
+RUN cd /app && npm run build
 
-RUN npm run build
-
-WORKDIR /app/dist/HelloWorld-Angular
-
+# STEP 2 build a small nginx image with static website
+FROM nginx:alpine
+## Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
+## From 'builder' copy website to default nginx public folder
+COPY --from=builder /app/dist /usr/share/nginx/html
 EXPOSE 80
-ENV PORT 80
-RUN npm install http-server -g
-CMD [ "http-server" ]
+CMD ["nginx", "-g", "daemon off;"]
