@@ -1,4 +1,4 @@
-FROM node:argon as node-angular-cli
+FROM stefanscherer/node-windows as node-angular-cli
 
 WORKDIR /app
 COPY package.json /app
