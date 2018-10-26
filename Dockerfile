@@ -1,4 +1,4 @@
-FROM node:alpine as node-angular-cli
+FROM node:argon as node-angular-cli
 
 WORKDIR /app
 COPY package.json /app
