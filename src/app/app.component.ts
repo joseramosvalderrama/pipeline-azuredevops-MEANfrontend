@@ -25,7 +25,6 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     let form = document.querySelectorAll('#example_form > input');
-    console.log(form);
     let name = (<HTMLInputElement>form[0]).value;
     let description = (<HTMLInputElement>form[1]).value;
     if(name != '' && description != '') {

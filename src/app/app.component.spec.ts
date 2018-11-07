@@ -1,11 +1,17 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { ExampleService } from './services/example.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientModule } from "@angular/common/http";
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
       ],
+      imports: [HttpClientModule, HttpClientTestingModule],
+      providers: [ExampleService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
