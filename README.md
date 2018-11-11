@@ -1,27 +1,27 @@
 # HelloWorldAngular
 
+## Project description
+
+The goal of this project is to generate a basic application in Angular to explain the stages of a pipeline in Azure Devops using Docker containers. The application only contains a view with a form to save data in our Microsoft Azure database. The application is ready to be tested, be built and deployed in an Azure Devops pipeline.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+## Project configuration
+
+Change the url in the file `src/services/example.service.ts` with the url of your API. Remember that the url should finish with `/api/`.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Build Docker Image
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `docker build -t helloworld-angular .` for build the Docker Image.
 
-## Build
+## Run Docker Image 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `docker run -d -p 8000:8000 helloworld-angular`. Navigate to `http://localhost:8000` to see the app running.
 
-## Running unit tests
+## Test the app
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm test` to run the test of the app. By default the test are configurated to be executed in Chrome Headless, you can change that in the file `src/karma.conf.js`.

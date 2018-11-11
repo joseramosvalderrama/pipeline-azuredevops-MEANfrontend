@@ -8,7 +8,7 @@ import { Example } from '../models/example';
     public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = 'https://api-node-azure.azurewebsites.net/api/';
+      this.url = 'api url' + '/api/';
     }
 
     getExample(): Observable<any>{
