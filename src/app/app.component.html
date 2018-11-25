@@ -4,10 +4,13 @@
     Hello World in Angular!
   </h1>
   <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-  <div *ngFor="let elem of getList">
-    <h3>{{elem.name}}</h3>
-  </div>
-  <div>
+  <h3>Todos los contactos:</h3>
+  <ul>
+    <li *ngFor="let elem of getList">{{elem.name}} ( {{elem.description}} )</li>
+  </ul>
+  <div *ngIf="getList.length === 0">No existen contactos!</div>
+  <div class="add-contact">
+      <h3>Añadir un nuevo contacto: </h3>
     <form id="example_form">
       <label>Nombre</label> <input type="text" name="name">
       <label>Descripción</label><input type="text" name="description">

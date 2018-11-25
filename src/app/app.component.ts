@@ -29,7 +29,9 @@ export class AppComponent implements OnInit {
     let description = (<HTMLInputElement>form[1]).value;
     if(name != '' && description != '') {
       let example = new Example(name,description);
-      this._exampleService.saveExample(example).subscribe();
+      this._exampleService.saveExample(example).subscribe(response => {
+        this.ngOnInit();
+      });
     }
   }
 }

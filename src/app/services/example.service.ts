@@ -8,17 +8,17 @@ import { Example } from '../models/example';
     public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = 'https://demoapinode.azurewebsites.net' + '/api/';
+      this.url = 'https://demoaplnode.azurewebsites.net' + '/api/';
     }
 
     getExample(): Observable<any>{
       let headers = new HttpHeaders().set('Content-Type','application/json')
-      return this._http.get(this.url + 'example', {headers: headers});
+      return this._http.get(this.url + 'persona', {headers: headers});
     }
 
     saveExample(example: Example): Observable<any>{
       let params = JSON.stringify(example);
       let headers = new HttpHeaders().set('Content-Type','application/json');
-      return this._http.post(this.url + 'example', params, {headers:headers});
+      return this._http.post(this.url + 'persona', params, {headers:headers});
     }
 }
