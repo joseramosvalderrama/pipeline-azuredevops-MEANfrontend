@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { ExampleService } from './services/example.service';
-import { Example } from './models/example';
+import { PersonaService } from './services/persona.service';
+import { Persona } from './models/persona';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ExampleService]
+  providers: [PersonaService]
 })
 export class AppComponent implements OnInit {
   title = 'app';
   getList;
 
   constructor(
-   private _exampleService: ExampleService) { 
+   private _exampleService: PersonaService) { 
      this.getList = [];
    }
 
@@ -28,7 +28,7 @@ export class AppComponent implements OnInit {
     let name = (<HTMLInputElement>form[0]).value;
     let description = (<HTMLInputElement>form[1]).value;
     if(name != '' && description != '') {
-      let example = new Example(name,description);
+      let example = new Persona(name,description);
       this._exampleService.saveExample(example).subscribe(response => {
         this.ngOnInit();
       });

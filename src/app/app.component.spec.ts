@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-import { ExampleService } from './services/example.service';
+import { PersonaService } from './services/persona.service';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { HttpClientModule } from "@angular/common/http";
 
@@ -11,7 +11,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [HttpClientModule, HttpClientTestingModule],
-      providers: [ExampleService]
+      providers: [PersonaService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {

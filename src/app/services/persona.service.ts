@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
-import { Example } from '../models/example';
+import { Persona } from '../models/persona';
 
 @Injectable()
-  export class ExampleService{
+  export class PersonaService{
     public url: string;
 
     constructor(public _http: HttpClient){
@@ -16,8 +16,8 @@ import { Example } from '../models/example';
       return this._http.get(this.url + 'persona', {headers: headers});
     }
 
-    saveExample(example: Example): Observable<any>{
-      let params = JSON.stringify(example);
+    saveExample(persona: Persona): Observable<any>{
+      let params = JSON.stringify(persona);
       let headers = new HttpHeaders().set('Content-Type','application/json');
       return this._http.post(this.url + 'persona', params, {headers:headers});
     }

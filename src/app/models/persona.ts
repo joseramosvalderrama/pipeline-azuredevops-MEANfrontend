@@ -1,4 +1,4 @@
-export class Example{
+export class Persona{
 	constructor(
 		public name: string,
 		public description: string
