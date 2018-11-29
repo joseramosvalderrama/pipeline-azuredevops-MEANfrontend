@@ -13,23 +13,23 @@ export class AppComponent implements OnInit {
   getList;
 
   constructor(
-   private _exampleService: PersonaService) { 
+   private _personaService: PersonaService) { 
      this.getList = [];
    }
 
   ngOnInit() {
-    this._exampleService.getExample().subscribe(res => {
+    this._personaService.getPersona().subscribe(res => {
       this.getList = res.response;
     })
   }
 
   onSubmit() {
-    let form = document.querySelectorAll('#example_form > input');
+    let form = document.querySelectorAll('#persona_form > input');
     let name = (<HTMLInputElement>form[0]).value;
     let description = (<HTMLInputElement>form[1]).value;
     if(name != '' && description != '') {
-      let example = new Persona(name,description);
-      this._exampleService.saveExample(example).subscribe(response => {
+      let persona = new Persona(name,description);
+      this._personaService.savePersona(persona).subscribe(response => {
         this.ngOnInit();
       });
     }

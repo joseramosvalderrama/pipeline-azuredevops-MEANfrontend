@@ -8,15 +8,15 @@ import { Persona } from '../models/persona';
     public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = 'https://demoaplnode.azurewebsites.net' + '/api/';
+      this.url = 'api url' + '/api/';
     }
 
-    getExample(): Observable<any>{
+    getPersona(): Observable<any>{
       let headers = new HttpHeaders().set('Content-Type','application/json')
       return this._http.get(this.url + 'persona', {headers: headers});
     }
 
-    saveExample(persona: Persona): Observable<any>{
+    savePersona(persona: Persona): Observable<any>{
       let params = JSON.stringify(persona);
       let headers = new HttpHeaders().set('Content-Type','application/json');
       return this._http.post(this.url + 'persona', params, {headers:headers});
