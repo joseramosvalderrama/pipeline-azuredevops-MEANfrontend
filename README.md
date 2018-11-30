@@ -8,7 +8,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Project configuration
 
-Change the url in the file `src/services/persona.service.ts` with the url of your API. Remember that the url should finish with `/api/`.
+Change the url in the file `src/app/services/persona.service.ts` with the url of your API. Remember that the url should finish with `/api/`.
 
 ## Development server
 
