@@ -8,7 +8,7 @@ import { Persona } from '../models/persona';
     public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = 'api url' + '/api/';
+      this.url = 'https://pfgpccbackend.azurewebsites.net' + '/api/';
     }
 
     getPersona(): Observable<any>{
