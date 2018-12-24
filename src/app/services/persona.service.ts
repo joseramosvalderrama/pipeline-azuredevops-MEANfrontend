@@ -3,12 +3,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { Persona } from '../models/persona';
 
+import { environment } from '../../environments/environment';
+
 @Injectable()
   export class PersonaService{
-    public url: string;
+  public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = 'https://pfgpccbackend.azurewebsites.net' + '/api/';
+      this.url = environment.apiUrl + 'api/';
     }
 
     getPersona(): Observable<any>{
