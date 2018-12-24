@@ -43,5 +43,4 @@ Thumbs.db
 #tests
 test-results
 
-# environment variables file
-/src/environments/*
+

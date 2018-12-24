@@ -10,7 +10,7 @@ import { environment } from '../../environments/environment';
   public url: string;
 
     constructor(public _http: HttpClient){
-      this.url = environment.apiUrl + 'api/';
+      this.url = environment.apiUrl + '/api/';
     }
 
     getPersona(): Observable<any>{
