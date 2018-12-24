@@ -42,3 +42,8 @@ Thumbs.db
 
 #tests
 test-results
+
+# dotenv environment variables file
+.env
+.env.test
+.env.prod
