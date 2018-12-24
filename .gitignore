@@ -43,7 +43,5 @@ Thumbs.db
 #tests
 test-results
 
-# dotenv environment variables file
-.environment.ts
-.environment.test.ts
-.environment.prod.ts
+# environment variables file
+/src/environments/*
