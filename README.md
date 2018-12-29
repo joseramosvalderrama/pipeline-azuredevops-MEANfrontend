@@ -11,20 +11,22 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Project configuration
 
 Configure the files 
-/src/environments/environment.ts
-/src/environments/environment.prod.ts
+
+`/src/environments/environment.ts`
+
+`/src/environments/environment.prod.ts`
 
 Look the samples in the folder. Change the url of the file environment.prod.ts with the url of your API. 
 
 ## Development server
 
-Run `ng serve` of `ng serve --prod` for a dev server. The first one reads the file environment.ts. The second one reads the file environment.prod.ts
+Run `ng serve` or `ng serve --prod` for a dev server. The first one reads the file environment.ts. The second one reads the file environment.prod.ts
 
 Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files. More information https://angular.io/guide/deployment
 
 ## Build Docker Image
 
-Run `docker build -t helloworld-angular .` for build the Docker Image.
+Run `docker build -t helloworld-angular` for building the Docker Image.
 
 ## Run Docker Image 
 
@@ -32,4 +34,4 @@ Run `docker run -d -p 8000:8000 helloworld-angular`. Navigate to `http://localho
 
 ## Test the app
 
-Run `npm test` to run the test of the app. By default the test are configurated to be executed in Chrome Headless, you can change that in the file `src/karma.conf.js`.
+Run `npm test` for testing the app. By default the test are configurated to be executed in Chrome Headless, you can change that in the file `src/karma.conf.js`.
