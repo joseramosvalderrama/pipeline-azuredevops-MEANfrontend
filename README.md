@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/jdiazEMS/EMSTrabajo1EMANfrontend/_apis/build/status/EMSTrabajo1EMANfrontend-rg%20-%20CI?branchName=master)](https://dev.azure.com/jdiazEMS/EMSTrabajo1EMANfrontend/_build/latest?definitionId=2?branchName=master)
+
 # HelloWorldAngular
 
 This application will be used in the course "Software Evolution and Maintenance" of Software Engieering Degre of Technical University of Madrid (Universidad Politécnica de Madrid, ETSI Sistemas Informáticos).
