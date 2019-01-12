@@ -1,4 +1,8 @@
-[![Build Status](https://dev.azure.com/jdiazEMS/EMSTrabajo1EMANfrontend/_apis/build/status/EMSTrabajo1EMANfrontend-rg%20-%20CI?branchName=master)](https://dev.azure.com/jdiazEMS/EMSTrabajo1EMANfrontend/_build/latest?definitionId=2?branchName=master)
+#pipeline-MEANfrontend-azuredevops
+
+Repositorio para el laboratorio de CI/CD con Azure DevOps
+
+This respository is a mirror of [HelloworldAngular](https://github.com/jdiazfernandez/helloworld-angular.git).
 
 # HelloWorldAngular
 
