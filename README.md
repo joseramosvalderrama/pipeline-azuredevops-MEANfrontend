@@ -1,6 +1,14 @@
 # Pipeline-MEANfrontend-azuredevops
 
-Repositorio para el laboratorio de CI/CD con Azure DevOps
+Repositorio para el laboratorio de CI/CD con Azure DevOps.
+
+## Descripción del laboratorio
+
+En este laboratorio el alumno aprenderá los fundamentos de los pipelines de Azure DevOps y configurará un pipeline para una aplicación Angular dockerizada. 
+
+*El paso de conectar Github con Azure DevOps mediante hooks de forma que cada vez que se realice un commit en el repositorio se ejecute de forma automática el pipeline de Azure DevOps, se realiza automáticamente.*
+
+## Ohter information
 
 This respository is a mirror of [HelloworldAngular](https://github.com/jdiazfernandez/helloworld-angular.git).
 
