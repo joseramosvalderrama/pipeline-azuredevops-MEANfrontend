@@ -6,7 +6,7 @@ This application will be used in the course "Software Evolution and Maintenance"
 
 ## Project description
 
-This is the code of a basic Angular application deployed into Docker containers whose build and release pipelines have to be automated   with Azure Devops. This Angular application makes GET & POST requests to an API to get a list of data and save data in an Azure Cosmos DB. The application is ready to be built, tested and deployed in an Azure DevOps pipeline.
+This is the code of a basic Angular application deployed into Docker containers whose build and release pipelines have to be automated   with Azure Devops. This Angular application makes GET & POST requests to an API ([API NODE](https://github.com/jdiazfernandez/api-node.git)) to get a list of data and save data in an Azure Cosmos DB. The application is ready to be built, tested and deployed in an Azure DevOps pipeline.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
